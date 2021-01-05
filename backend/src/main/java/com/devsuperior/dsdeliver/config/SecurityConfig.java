@@ -14,7 +14,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-// LIBERAÇÃO DO CORS PRA QUE O BACKEND POSSA CONVERSAR COM O FRONTEND. MAIS EXPLICACAO SOBRE O Q EH ESSE CORS NO .TXT DE ANOTACOES DA AULA DE BACKEND.
+// LIBERA O CORS PRA Q O BACKEND CONSIGA CONVERSAR C/ O FRONTEND. O Q EH CORS? R: VER NO ARQUIVO .TXT DE ANOTACOES DA AULA BACKEND.
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -24,7 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		// Esse if libera o acesso a aplicacao pra gerenciar o BD h2. Tem q fazer isso senão a aplicação de gerenciamento do h2 n ira funfar corretamente.
+		// Libera acesso a aplicacao pra gerenciar o banco de dados h2. Isso eh necessario pois senao a aplicacao de gerenciamento do h2 n ira funfar corretamente.
 		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
 			http.headers().frameOptions().disable();
 		}
