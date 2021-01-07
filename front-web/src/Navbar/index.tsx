@@ -1,6 +1,5 @@
 import './styles.css'
 import {ReactComponent as Logo} from './logo.svg'
-import React from 'react'
 
 function Navbar() {
     return (
