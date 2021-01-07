@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+/* Daqui pra baixo é o App.css do prof (peguei no git) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #da5c5c;
+  --primary-hover-color: #a74b4b;
+  --dark-color: #263238;
+  --secondary-color: #9E9E9E;
+  --light-color: #F5F5F5;
+}
+
+/* Tira aquela margem branca q fica antes da navbar por ex */
+html, body {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Tira o sublinhado do titulo do site na navbar */
+a {
+  text-decoration: none;
+}
