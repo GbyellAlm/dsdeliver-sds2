@@ -8,8 +8,18 @@ export type Product = {
     imageUri: string;
 }
 
-export type OrderLocationdata = {
+export type OrderLocationData = {
     latitude: number;
     longitude: number;
     address: string;
 }
+
+// Representa o payload q vou enviar pro backend
+type ProductId = {
+    id: number;
+}
+
+// & OrderLocationdata, esse & eh pq a estrutura de pedidos do backend eh os atributos do orderlocationdata + uma lista de pedidos
+export type OrderPayload = {
+    products: ProductId[];
+} & OrderLocationData;

@@ -1,6 +1,6 @@
-// INICIALIZA A LISTA DE PRODUTOS PRO CICLO DE VIDA DO COMPONENTE
-
+// Inicializa a lista de produtos pro ciclo de vida do componente
 import axios from "axios";
+import { OrderPayload } from "./Orders/types";
 
 // Armazenei essa url numa constante pq vamos usar ela em outros momentos tb
 const API_URL = 'http://localhost:8080'
@@ -16,4 +16,9 @@ export function fetchProducts() {
 // API PRA SE COMUNICAR C/ O MAPBOX
 export function fetchLocalMapBox(local: string) {
     return axios(`https://api.mapbox.com/geocoding/v5/mapbox.places/${local}.json?access_token=${mapboxToken}`)
+}
+
+// Salvando o pedido feito pelo usu 
+export function saveOrder(payload:OrderPayload) {
+    return axios.post(` ${API_URL}/orders`, payload);
 }
