@@ -1,4 +1,3 @@
-import { ReactComponent } from "*.svg";
 import React from "react";
 import { checkIsSelected } from "./helpers";
 import ProductCard from "./ProductCard"
