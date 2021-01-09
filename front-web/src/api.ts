@@ -2,7 +2,6 @@
 import axios from "axios";
 import { OrderPayload } from "./Orders/types";
 
-// Armazenei essa url numa constante pq vamos usar ela em outros momentos tb
 const API_URL= process.env.REACT_APP_API_URL;
 
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
